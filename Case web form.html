@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audi Kontaktformular</title>
+
+<style>
+:root {
+    --audi-black: #000000;
+    --audi-dark-grey: #1a1a1a;
+    --audi-white: #ffffff;
+    --audi-grey-400: #999999;
+    --audi-grey-700: #333333;
+    --audi-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--audi-black);
+    font-family: var(--audi-font);
+    color: var(--audi-white);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* NAVIGATION */
+
+.top-nav {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--audi-grey-700);
+    margin-bottom: 60px;
+    background: var(--audi-black);
+}
+
+.top-nav-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audi-logo {
+    width: 80px;
+    height: auto;
+}
+
+.nav-links {
+    display: none;
+}
+
+/* MAIN CONTENT */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 80px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 650px;
+    background: transparent;
+}
+
+.form-header {
+    margin-bottom: 56px;
+}
+
+.form-header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: var(--audi-white);
+}
+
+.form-body {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid var(--audi-grey-700);
+    background-color: transparent;
+    padding: 12px 0;
+    font-family: var(--audi-font);
+    font-size: 16px;
+    color: var(--audi-white);
+    border-radius: 0;
+    transition: border-color 0.3s ease;
+    font-weight: 300;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--audi-grey-400);
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-bottom: 1px solid var(--audi-white);
+}
+
+/* BUTTON */
+
+button {
+    background-color: var(--audi-white);
+    color: var(--audi-black);
+    border: 1px solid var(--audi-white);
+    padding: 18px 48px;
+    font-family: var(--audi-font);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--audi-white);
+}
+
+/* FOOTER */
+
+.footer-text {
+    font-size: 13px;
+    color: var(--audi-grey-400);
+    line-height: 1.8;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--audi-grey-700);
+}
+
+@media (max-width: 768px) {
+    .form-header h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+    <div class="top-nav-content">
+        <svg class="audi-logo" viewBox="0 0 71 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.08 24.16c6.67 0 12.08-5.41 12.08-12.08S18.75 0 12.08 0 0 5.41 0 12.08s5.41 12.08 12.08 12.08zm0-21.75c5.34 0 9.67 4.33 9.67 9.67s-4.33 9.67-9.67 9.67-9.67-4.33-9.67-9.67 4.33-9.67 9.67-9.67z" fill="#fff"/>
+            <path d="M27.58 24.16c6.67 0 12.08-5.41 12.08-12.08S34.25 0 27.58 0s-12.08 5.41-12.08 12.08 5.41 12.08 12.08 12.08zm0-21.75c5.34 0 9.67 4.33 9.67 9.67s-4.33 9.67-9.67 9.67-9.67-4.33-9.67-9.67 4.33-9.67 9.67-9.67z" fill="#fff"/>
+            <path d="M43.08 24.16c6.67 0 12.08-5.41 12.08-12.08S49.75 0 43.08 0s-12.08 5.41-12.08 12.08 5.41 12.08 12.08 12.08zm0-21.75c5.34 0 9.67 4.33 9.67 9.67s-4.33 9.67-9.67 9.67-9.67-4.33-9.67-9.67 4.33-9.67 9.67-9.67z" fill="#fff"/>
+            <path d="M58.58 24.16c6.67 0 12.08-5.41 12.08-12.08S65.25 0 58.58 0s-12.08 5.41-12.08 12.08 5.41 12.08 12.08 12.08zm0-21.75c5.34 0 9.67 4.33 9.67 9.67s-4.33 9.67-9.67 9.67-9.67-4.33-9.67-9.67 4.33-9.67 9.67-9.67z" fill="#fff"/>
+        </svg>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="form-card">
+
+        <div class="form-header">
+            <h1>Kontakt</h1>
+        </div>
+
+        <div class="form-body">
+
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+                <input type="hidden" name="orgid" value="00Dg8000004w3xj">
+                <input type="hidden" name="retURL" value="https://www.audi.de/de/brand/de.html">
+
+                <div class="form-group">
+                    <input name="name" type="text" placeholder="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input name="email" type="email" placeholder="E-Mail-Adresse" required>
+                </div>
+
+                <div class="form-group">
+                    <input name="phone" type="tel" placeholder="Telefon (optional)">
+                </div>
+
+                <div class="form-group">
+                    <input name="subject" type="text" placeholder="Betreff" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="description" placeholder="Beschreibung" required></textarea>
+                </div>
+
+                <button type="submit">Jetzt senden</button>
+
+                <div class="footer-text">
+                    Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
